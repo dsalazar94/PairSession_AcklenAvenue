@@ -6,8 +6,24 @@ namespace Kata
     {
         //private int number_1;
         public int Add(string number = "0")
-        { 
-            return Int32.Parse(number);
+        {
+            int res = 0;
+            string[] temp;
+            if (number.Contains(","))
+            {
+                temp = number.Split(",");
+                foreach (var digit in temp)
+                {
+                    res += Int32.Parse(digit);
+                }
+
+                return res;
+            }
+            else
+            {
+                return Int32.Parse(number);
+            }
+            
         }
     }
 }
