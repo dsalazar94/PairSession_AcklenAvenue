@@ -8,9 +8,12 @@ namespace Kata
         public int Add(string number = "0")
         {
             int res = 0;
+            int i = 0;
             string[] temp;
+            string[] newValues;
             if (number.Contains(","))
             {
+                
                 temp = number.Split(",");
                 foreach (var digit in temp)
                 {
